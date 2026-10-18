@@ -24,6 +24,12 @@
 - 播放视频时阻止显示器休眠
 - 单实例运行；登录状态本地持久化
 
+## 下载
+
+Windows x64 便携版见 [Releases](https://github.com/DownSG/mouguo-drama-desktop/releases)。
+
+下载 `MouGuoDrama-1.0.0-portable.exe` 后直接双击运行，无需安装。首次启动会解压到临时目录，可能稍慢。
+
 ## 运行与构建
 
 环境要求：Node.js 20+、Windows 10 1809+。
