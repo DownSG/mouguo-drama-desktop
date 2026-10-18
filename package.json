@@ -1,0 +1,53 @@
+{
+  "name": "mouguo-drama-desktop",
+  "productName": "MouGuoDrama",
+  "version": "1.0.0",
+  "description": "某果短剧自用端 — 非官方 Electron 桌面壳（自用）",
+  "main": "main.js",
+  "author": "MouGuo Desktop",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "44.9.0",
+    "electron-builder": "26.15.3"
+  },
+  "build": {
+    "appId": "com.mouguo.drama.desktop",
+    "productName": "MouGuoDrama",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "ui/**/*",
+      "assets/icon.png",
+      "assets/icon.ico",
+      "package.json",
+      "README.md",
+      "LICENSE"
+    ],
+    "asar": true,
+    "electronDist": "node_modules/electron/dist",
+    "win": {
+      "icon": "assets/icon.ico",
+      "executableName": "MouGuoDrama",
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "MouGuoDrama-${version}-portable.${ext}"
+    },
+    "portable": {
+      "artifactName": "MouGuoDrama-${version}-portable.${ext}"
+    }
+  }
+}
